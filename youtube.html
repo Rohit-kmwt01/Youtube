@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .main {
+            height: 100vh;
+            overflow: auto;
+
+        }
+
+        .navbar {
+            /* border: 2px solid red; */
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            /* align-content: center; */
+            padding-left: 10px;
+        }
+        .logo i{
+            font-size: 25px;
+        }
+        .logo {
+            margin-right: 30px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-weight: normal;
+        }
+
+        .logo sup {
+            font-size: 10px;
+        }
+
+        .navbar input {
+            margin-left: 150px;
+            height: 37px;
+            width: 500px;
+            border-radius: 40px 0px 0px 40px;
+            padding-left: 30px;
+            font-size: 15px;
+            /* background-color: ); */
+            /* margin-left: 10px; */
+            border: 1px solid lightgrey;
+
+        }
+
+        .srh {
+            display: flex;
+        }
+
+        .srh button {
+            height: 37px;
+            width: 60px;
+            border-radius: 0px 40px 40px 0px;
+            border: 1px solid lightgrey;
+        }
+        .micro{
+            margin-right: 130px;
+        }
+        .micro button {
+            height: 40px;
+            width: 40px;
+            /* margin-left: 15px; */
+            border-radius: 50%;
+            border: none;
+        }
+        .micro button:hover{
+            background-color: rgb(205, 205, 216);
+        }
+        .trddot button {
+            height: 40px;
+            width: 20px;
+            margin-left: 20px;
+            font-size: 19px;
+            border: none;
+            background-color: white;
+        }
+        .trddot button:hover{
+            background-color: rgb(205, 205, 216);
+        }
+        .sign button {
+            height: 30px;
+            width: 80px;
+            border: 1px solid;
+            /* margin-left: 60px; */
+            border-radius: 20px;
+            margin-right: 30px;
+        }
+        .sgin button:hover{
+            background-color: rgb(205, 205, 216);
+        }
+
+        .pr {
+            height: 91%;
+            display: flex;
+        }
+
+        .sidebar {
+            width: 17%;
+            border: 1px solid;
+            height: 90vh;
+            overflow: auto;
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+
+        }
+
+        .main2 {
+            width: 83%;
+            /* border: 2px solid; */
+            height: 100%;
+
+        }
+
+        .main2_nav {
+            /* border: 2px solid; */
+            height: 40px;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            align-content: space-between;
+            /* overflow: auto; */
+            
+
+        }
+
+        .main2_nav button {
+            border-radius: 8px;
+            height: 30px;
+            /* width: 60px ; */
+            padding: 5px 15px;
+            border: none;
+            box-sizing: border-box;
+            cursor: pointer;
+        }
+
+        .main2_nav button:hover {
+            background-color: rgb(205, 205, 216);
+            
+        }
+
+        .cards {
+            padding: 10px 0px;
+            height: 93%;
+            /* background-color: black; */
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+            overflow: auto;
+        }
+
+        .card {
+            margin: 0;
+            padding: 0;
+            width: 320px;
+            height: 300px;
+            background-color: white;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 1px 1px 2px 3px lightgray;
+        }
+        .sidebtn button{
+            padding-left: 20px;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            width: 190px;
+            height: 38px;
+            border-radius: 10px;
+            font-size: 18px;
+            /* border: 1px solid; */
+            border: none;
+            cursor: pointer;
+        }
+        .sidebtn button:hover{
+            background-color: rgb(205, 205, 216);
+        }
+        .sidebtn h6{
+            font-weight: normal;
+        }
+        .pra{
+            width: 170px;
+            margin-left: 20px;
+            font-size: 13px;
+        }
+    .spc{
+        border: 1px solid lightgray;
+        margin: 5px 20px;
+        width: 150px;
+        
+    }
+    .sign button{
+        height: 30px;
+            width: 100px;
+            border: 1px solid lightgray;
+            /* margin-left: 60px; */
+            border-radius: 20px;
+            font-size: 14px;
+            margin-left: 20px;       
+    }
+    .sign a{
+        display: flex;
+        gap: 5px;
+        justify-content: center;
+    }
+    .sign button a{
+        text-decoration: none;
+        color: blue;
+    }
+    .exp{
+        margin-left: 20px;
+        
+    }
+    .sidebtn button img{
+        width: 18px;
+        height: 18px;
+    }
+    .copy{
+        margin-left: 10px;
+        font-size: 13px;
+    }
+    .vdmain{
+        display: flex;
+        padding: 3px 8px;
+        box-sizing: border-box;
+    }
+    .vdlog img{
+            width: 30px;
+            height: 30px;
+        }
+    .vdtitle{
+        margin-left: 10px;
+    }
+    .vdtitle p{
+        margin-top: 5px;
+        /* line-height: 20px; */
+    }.menu h2{
+        font-weight: normal;
+        font-size: 17px;
+        margin-left: 15px;
+    }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <div class="navbar">
+            <div class="menu">
+            <h2><i class="fa-solid fa-bars" style="color: #0c0d0d;"></i></h2>
+            </div>
+            <div class="logo">
+                <h3><i class="fa-brands fa-youtube" style="color: #ef0b17;"></i>YouTube <sup>IN</sup></h3>
+            </div>
+
+            <div class="srh">
+                <input type="search" placeholder="Search">
+                <button>
+                    <i class="fa-solid fa-magnifying-glass" style="color: #0d0d0d;"></i>
+                </button>
+            </div>
+
+            <div class="micro">
+                <button>
+                    <i class="fa-solid fa-microphone" style="color: #0d0d0d;"></i>
+                </button>
+            </div>
+
+            <div class="trddot">
+                <button>
+                    <i class="fa-solid fa-ellipsis-vertical" style="color: #141414;"></i>
+                </button>
+            </div>
+
+            <div class="sign">
+                <button>
+                    <a href=""><i class="fa-solid fa-circle-user" style="color: #050505;"></i>Sign
+                        in</a>
+                </button>
+            </div>
+        </div>
+
+        <div class="pr">
+            <div class="sidebar">
+
+                <div class="sidebtn">
+                    <button>
+                        <i class="fa-solid fa-house" style="color: #0a0a0a;"></i><h6>Home</h6>
+                    </button>
+                </div>
+                <div class="sidebtn">
+                    <button>
+                        <i class="fa-brands fa-tiktok" style="color: #121212;"></i>
+                        <h6>Shorts</h6>
+                    </button>
+                </div>
+                <div class="sidebtn">
+                    <button>
+                       <img src="https://cdn-icons-png.flaticon.com/128/2989/2989849.png" alt=""><h6>Subscription</h6>
+                    </button>
+                </div>
+               
+                <div class="spc"></div>
+                <div class="sidebtn">
+                    <button>
+                        <i class="fa-solid fa-clock-rotate-left" style="color: #0f0f0f;">
+                        </i><h6>History</h6>
+                    </button>
+                </div>
+                <div class="sidebtn">
+                    <button>
+                        <i class="fa-solid fa-bell" style="color: #0a0a0b;"></i>
+                        <h6>Notification</h6>
+                    </button>
+                </div>
+                <div class="sidebtn">
+                    <button>
+                        <i class="fa-solid fa-play" style="color: #080808;"></i>
+                        <h6>You</h6>
+                    </button>
+                </div>
+                <div class="spc"></div>
+                <div class="sidebtn">
+                        <p class="pra">Sign in to like videos,<br> comment, and subscribe.</p>
+                </div>
+                        <div class="sign">
+                        <button>
+                        
+                        <a href=""><i class="fa-solid fa-circle-user" style="color: #050505;"></i>Sign
+                            in</a></button>
+                        </div>
+                        <div class="spc"></div>
+                        <div class="exp">
+                            <h4>Explore</h4>
+                        </div>
+                        <div class="sidebtn">
+                            <button>
+                                <img src="https://cdn-icons-png.flaticon.com/128/1946/1946485.png" alt=""><h6>Trending</h6>
+                            </button>
+                        </div>
+                        <div class="sidebtn">
+                            <button>
+                                <i class="fa-solid fa-bag-shopping" style="color: #0a0a0a;"></i><h6>Shopping</h6>
+                            </button>
+                        </div>
+                        <div class="sidebtn">
+                            <button>
+                                <i class="fa-solid fa-music" style="color: #0d0d0d;"></i><h6>Music</h6>
+                            </button>
+                        </div>
+                        <div class="sidebtn">
+                            <button>
+                                <i class="fa-solid fa-clapperboard" style="color: #0d0d0d;"></i><h6>Movie</h6>
+                            </button>
+                        </div>
+                        <div class="sidebtn">
+                            <button>
+                               <img src="https://cdn-icons-png.flaticon.com/128/10905/10905086.png" alt=""><h6>Live</h6>
+                            </button>
+                        </div>
+                        <div class="sidebtn">
+                            <button>
+                                <i class="fa-solid fa-gamepad" style="color: #050505;"></i><h6>Gamming</h6>
+                            </button>
+                        </div>
+                        <div class="sidebtn">
+                            <button>
+                                <i class="fa-regular fa-newspaper" style="color: #080808;"></i><h6>News</h6>
+                            </button>
+                        </div>
+                        <div class="sidebtn">
+                            <button>
+                                <i class="fa-solid fa-trophy" style="color: #050505;"></i><h6>Sports</h6>
+                            </button>
+                        </div>
+                        <div class="sidebtn">
+                            <button>
+                                <i class="fa-solid fa-lightbulb" style="color: #0d0d0d;"></i><h6>Courses</h6>
+                            </button>
+                        </div>
+                        <div class="sidebtn">
+                            <button>
+                                <img src="https://cdn-icons-png.flaticon.com/128/1051/1051009.png" alt=""><h6>Fashion & Beauty</h6>
+                            </button>
+                        </div>
+                        <div class="sidebtn">
+                            <button>
+                                <img src="https://cdn-icons-png.flaticon.com/128/9199/9199639.png" alt=""><h6>Podcasts</h6>
+                            </button>
+                        </div>
+                        <div class="spc"></div>
+                        <div class="exp">
+                            <h4>More from YouTube</h4>
+                        </div>
+                        <div class="sidebtn">
+                            <button>
+                                <i class="fa-brands fa-youtube" style="color: #f50a0a;"></i><h6>YouTube Premium</h6>
+                            </button>
+                        </div>
+                        <div class="sidebtn">
+                            <button>
+                               <img src="https://cdn-icons-png.flaticon.com/128/15047/15047447.png" alt=""><h6>YouTube Music</h6>
+                            </button>
+                        </div>
+                        <div class="sidebtn">
+                            <button>
+                                <img src="https://cdn-icons-png.flaticon.com/128/720/720320.png" alt=""><h6>YouTube Kids</h6>
+                            </button>
+                        </div>
+                        <div class="spc"></div>
+                        <div class="sidebtn">
+                            <button>
+                                <i class="fa-solid fa-gear" style="color: #0d0d0d;"></i><h6>Setting</h6>
+                            </button>
+                        </div>
+                        <div class="sidebtn">
+                            <button>
+                                <i class="fa-regular fa-flag" style="color: #050505;"></i><h6>Report History</h6>
+                            </button>
+                        </div>
+                        <div class="sidebtn">
+                            <button>
+                                <i class="fa-regular fa-circle-question" style="color: #0c0d0d;"></i><h6>Help</h6>
+                            </button>
+                        </div>
+                        <div class="sidebtn">
+                            <button>
+                                <img src="https://cdn-icons-png.flaticon.com/128/15068/15068573.png" alt=""><h6>Feedback</h6>
+                            </button>
+                        </div>
+                        <div class="spc"></div>
+                        <div class="sidebtn">
+                            <p class="pra">About Press Copyright <br>Contactus Creators Advertise <br>Developers.</p><br>
+                            <p class="pra">Terms Privacy Policy & Safety <br>How YouTube works  <br>Test new features</p>
+                            <p class="copy">&copy; 2024 Google LLC</p>
+                    </div>
+
+
+                </div>
+            
+            <div class="main2">
+                <div class="main2_nav">
+                    <button>All</button>
+                    <button>Song</button>
+                    <button>Lo-fi</button>
+                    <button>Music</button>
+                    <button>Mixes</button>
+                    <button>Reverberation</button>
+                    <button>Indian pop music</button>
+                    <button>T-series</button>
+                    <button>Arjit Singh</button>
+                    <button>Rajasthani Folk Songs</button>
+                </div>
+                <div class="cards">
+                    <div class="card">
+                        <div class="vd">
+                        <video src="Diljit Dosanjh_ Born To Shine (Official Music Video) G.O.A.T.mp4" style="width: 101%; max-height: 180px;"
+                            controls muted poster="https://i.ytimg.com/vi/iLHEGrNVf5Y/hqdefault.jpg">
+                        </video>
+                        </div>
+                        <div class="vdmain">
+                            <div class="vdlog">
+                                <img src="https://cdn-icons-png.flaticon.com/128/15047/15047447.png" alt="">
+                            </div>
+                            <div class="vdtitle">
+                                <h4>Diljit Dosanjh: Born To Shine (Official Music Video) G.O.A.T</h4>
+                                <p>Desi love Records</p>
+                                <p>681K view <b>:</b> 2months ago</p>
+                            </div>
+                        </div>
+                        </div>
+                    <div class="card">
+                        <div class="vd">
+                            <video src="Diljit Dosanjh_ Born To Shine (Official Music Video) G.O.A.T.mp4" width="101%"
+                                controls muted>
+                            </video>
+                            </div>
+                            <div class="vdmain">
+                                <div class="vdlog">
+                                    <img src="https://cdn-icons-png.flaticon.com/128/15047/15047447.png" alt="">
+                                </div>
+                                <div class="vdtitle">
+                                    <h4>Diljit Dosanjh: Born To Shine (Official Music Video) G.O.A.T</h4>
+                                    <p>Desi love Records</p>
+                                    <p>681K view <b>:</b> 2months ago</p>
+                                </div>
+                            </div>
+                    </div>
+                    <div class="card">
+                        <div class="vd">
+                            <video src="Diljit Dosanjh_ Born To Shine (Official Music Video) G.O.A.T.mp4" width="101%"
+                                controls muted>
+                            </video>
+                            </div>
+                            <div class="vdmain">
+                                <div class="vdlog">
+                                    <img src="https://cdn-icons-png.flaticon.com/128/15047/15047447.png" alt="">
+                                </div>
+                                <div class="vdtitle">
+                                    <h4>Diljit Dosanjh: Born To Shine (Official Music Video) G.O.A.T</h4>
+                                    <p>Desi love Records</p>
+                                    <p>681K view <b>:</b> 2months ago</p>
+                                </div>
+                            </div>
+                    </div>
+                    <div class="card">
+                        <div class="vd">
+                            <video src="Diljit Dosanjh_ Born To Shine (Official Music Video) G.O.A.T.mp4" width="101%"
+                                controls muted>
+                            </video>
+                            </div>
+                            <div class="vdmain">
+                                <div class="vdlog">
+                                    <img src="https://cdn-icons-png.flaticon.com/128/15047/15047447.png" alt="">
+                                </div>
+                                <div class="vdtitle">
+                                    <h4>Diljit Dosanjh: Born To Shine (Official Music Video) G.O.A.T</h4>
+                                    <p>Desi love Records</p>
+                                    <p>681K view <b>:</b> 2months ago</p>
+                                </div>
+                            </div>
+                    </div>
+                    <div class="card">
+                        <div class="vd">
+                            <video src="Diljit Dosanjh_ Born To Shine (Official Music Video) G.O.A.T.mp4" width="101%"
+                                controls muted>
+                            </video>
+                            </div>
+                            <div class="vdmain">
+                                <div class="vdlog">
+                                    <img src="https://cdn-icons-png.flaticon.com/128/15047/15047447.png" alt="">
+                                </div>
+                                <div class="vdtitle">
+                                    <h4>Diljit Dosanjh: Born To Shine (Official Music Video) G.O.A.T</h4>
+                                    <p>Desi love Records</p>
+                                    <p>681K view <b>:</b> 2months ago</p>
+                                </div>
+                            </div>
+                    </div>
+                    <div class="card">
+                        <div class="vd">
+                            <video src="Diljit Dosanjh_ Born To Shine (Official Music Video) G.O.A.T.mp4" width="101%"
+                                controls muted>
+                            </video>
+                            </div>
+                            <div class="vdmain">
+                                <div class="vdlog">
+                                    <img src="https://cdn-icons-png.flaticon.com/128/15047/15047447.png" alt="">
+                                </div>
+                                <div class="vdtitle">
+                                    <h4>Diljit Dosanjh: Born To Shine (Official Music Video) G.O.A.T</h4>
+                                    <p>Desi love Records</p>
+                                    <p>681K view <b>:</b> 2months ago</p>
+                                </div>
+                            </div>
+                    </div>
+                    <div class="card">
+                        <div class="vd">
+                            <video src="Diljit Dosanjh_ Born To Shine (Official Music Video) G.O.A.T.mp4" width="101%"
+                                controls muted>
+                            </video>
+                            </div>
+                            <div class="vdmain">
+                                <div class="vdlog">
+                                    <img src="https://cdn-icons-png.flaticon.com/128/15047/15047447.png" alt="">
+                                </div>
+                                <div class="vdtitle">
+                                    <h4>Diljit Dosanjh: Born To Shine (Official Music Video) G.O.A.T</h4>
+                                    <p>Desi love Records</p>
+                                    <p>681K view <b>:</b> 2months ago</p>
+                                </div>
+                            </div>
+                    </div>
+                    <div class="card">
+                        <div class="vd">
+                            <video src="Diljit Dosanjh_ Born To Shine (Official Music Video) G.O.A.T.mp4" width="101%"
+                                controls muted>
+                            </video>
+                            </div>
+                            <div class="vdmain">
+                                <div class="vdlog">
+                                    <img src="https://cdn-icons-png.flaticon.com/128/15047/15047447.png" alt="">
+                                </div>
+                                <div class="vdtitle">
+                                    <h4>Diljit Dosanjh: Born To Shine (Official Music Video) G.O.A.T</h4>
+                                    <p>Desi love Records</p>
+                                    <p>681K view <b>:</b> 2months ago</p>
+                                </div>
+                            </div>
+                    </div>
+                    <div class="card">
+                        <div class="vd">
+                            <video src="Diljit Dosanjh_ Born To Shine (Official Music Video) G.O.A.T.mp4" width="101%"
+                                controls muted>
+                            </video>
+                            </div>
+                            <div class="vdmain">
+                                <div class="vdlog">
+                                    <img src="https://cdn-icons-png.flaticon.com/128/15047/15047447.png" alt="">
+                                </div>
+                                <div class="vdtitle">
+                                    <h4>Diljit Dosanjh: Born To Shine (Official Music Video) G.O.A.T</h4>
+                                    <p>Desi love Records</p>
+                                    <p>681K view <b>:</b> 2months ago</p>
+                                </div>
+                            </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- <script src="https://cdn.lordicon.com/lordicon.js"></script>
+    <lord-icon src="https://cdn.lordicon.com/pxwxddbb.json" trigger="loop-on-hover" delay="00"
+        style="width:50px;height:50px">
+    </lord-icon> -->
+</body>
+
+</html>
